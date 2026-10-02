@@ -140,7 +140,7 @@ GameObject:
   m_IsActive: 1
 --- !u!212 &107720472
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -197,6 +197,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!4 &107720473
 Transform:
   m_ObjectHideFlags: 0
@@ -272,7 +273,7 @@ GameObject:
   - component: {fileID: 199574341}
   - component: {fileID: 199574343}
   m_Layer: 0
-  m_Name: Room C
+  m_Name: StartRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,7 +281,7 @@ GameObject:
   m_IsActive: 1
 --- !u!212 &199574341
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -337,6 +338,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!4 &199574342
 Transform:
   m_ObjectHideFlags: 0
@@ -435,7 +437,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &424902444
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -492,6 +494,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!61 &424902445
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -564,7 +567,7 @@ GameObject:
   - component: {fileID: 447278654}
   - component: {fileID: 447278656}
   m_Layer: 0
-  m_Name: Room N
+  m_Name: NorthRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -572,7 +575,7 @@ GameObject:
   m_IsActive: 1
 --- !u!212 &447278654
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -629,6 +632,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!4 &447278655
 Transform:
   m_ObjectHideFlags: 0
@@ -824,15 +828,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ComponentVersion: 3
+  m_ComponentVersion: 4
   m_LightType: 4
   m_BlendStyleIndex: 0
+  m_Light2DProvider:
+    rid: -2
+  m_SelectionSources:
+    rid: 2659248099231531012
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 000000003bbbb4a1c3460487
+  m_ApplyToSortingLayers: 000000003bbbb4a1c3460487i
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -847,6 +855,9 @@ MonoBehaviour:
   m_ShadowSoftnessFalloffIntensity: 0.5
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
@@ -864,6 +875,19 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 2659248099231531012
+      type: {class: Light2DProviderSources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data:
+        m_SelectedHashCode: 0
+        m_SelectedSource:
+          rid: -2
+        m_Provider2DCache:
+          rid: -2
 --- !u!4 &619394802
 Transform:
   m_ObjectHideFlags: 0
@@ -888,6 +912,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 742508537}
+  - component: {fileID: 742508538}
   m_Layer: 0
   m_Name: GameStateManager
   m_TagString: Untagged
@@ -910,6 +935,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 321996879}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &742508538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 742508536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3042f4587d2fe0e4d9bd4345b698f1c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameStateManager
+  islandState: 0
+  isVisualUp: 1
+  isMotorUp: 1
+  isLanguageUp: 1
 --- !u!1 &1223742318
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,6 +980,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7c0049f4e38a9c4397e6797c5646999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorRoomManager
+  roomIndex:
+  - key: 0
+    value: {fileID: 199574343}
+  - key: 1
+    value: {fileID: 447278656}
+  currRoom: 0
 --- !u!4 &1223742320
 Transform:
   m_ObjectHideFlags: 0
@@ -977,7 +1024,7 @@ GameObject:
   m_IsActive: 1
 --- !u!212 &2094528873
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1034,6 +1081,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!4 &2094528874
 Transform:
   m_ObjectHideFlags: 0
