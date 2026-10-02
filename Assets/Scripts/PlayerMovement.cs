@@ -15,7 +15,12 @@ public class PlayerMovement : MonoBehaviour
     public bool motorSunk = false; // TEMP
 
     // Events
-    public static event Action OnEnterDoor;
+
+    void Awake()
+    {
+        motorSunk = true;
+        GameStateManager.OnMotorSink += OnMotorSunk;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -88,6 +93,16 @@ public class PlayerMovement : MonoBehaviour
             OnEnterDoor?.Invoke();
         }
         */
+    }
+
+    void OnMotorSunk()
+    {
+        motorSunk = true;
+    }
+
+    void OnDestroy()
+    {
+        GameStateManager.OnMotorSink -= OnMotorSunk;
     }
 
 }
