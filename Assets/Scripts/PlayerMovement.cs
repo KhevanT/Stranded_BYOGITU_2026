@@ -16,8 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public static event Action<NPC.NPC_ID> OnNPCInteracted;
 
     // Anim
-    bool isWalking = false;
-    bool isTalking = false;
+    Animator animator;
 
     // State changes
     public bool motorSunk = false; // TEMP
@@ -35,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
         box2D = GetComponent<BoxCollider2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -48,14 +48,21 @@ public class PlayerMovement : MonoBehaviour
         if(PauseController.IsPaused)
         {
             rb2D.linearVelocity = Vector2.zero;
-            isWalking = false; // later update for anim
+            animator.SetBool("isWalking", false);
             return;
         }
+
+        if(moveInput == Vector2.zero)
+        {
+            animator.SetBool("isWalking", false);
+        }
+
         rb2D.linearVelocity = moveInput * moveSpeed;
     }
 
     public void MoveHandler(InputAction.CallbackContext context)
     {
+        animator.SetBool("isWalking", true);
         if (motorSunk)
         {
             MoveInverted(context);

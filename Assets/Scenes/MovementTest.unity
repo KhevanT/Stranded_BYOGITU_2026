@@ -1244,6 +1244,11 @@ Transform:
   - {fileID: 573011102}
   m_Father: {fileID: 4563254384835469798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &303981915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8904676353261835087, guid: e2b0ee6134cdd78429f91050802f03d3, type: 3}
+  m_PrefabInstance: {fileID: 2865153648192273567}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &321893341
 GameObject:
   m_ObjectHideFlags: 0
@@ -10510,12 +10515,34 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1897696131616475621, guid: e2b0ee6134cdd78429f91050802f03d3, type: 3}
   m_PrefabInstance: {fileID: 2865153648192273567}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 303981915}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a16c23bc2704a7245980f2e631f9d2da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+--- !u!95 &2094528883
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 303981915}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1ebdfedc1b4b4634680d3a5443628dd6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2116300324
 GameObject:
   m_ObjectHideFlags: 0
@@ -11935,6 +11962,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2332661670180186820, guid: e2b0ee6134cdd78429f91050802f03d3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: d5f958ea-1431-40d5-b024-7344350d84d1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332661670180186820, guid: e2b0ee6134cdd78429f91050802f03d3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
+      value: 388ed7da-04b2-48e1-9a29-fd365ee7c966
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332661670180186820, guid: e2b0ee6134cdd78429f91050802f03d3, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
+      value: 'Player/Interact[/Keyboard/e]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3359850998076362686, guid: e2b0ee6134cdd78429f91050802f03d3, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3359850998076362686, guid: e2b0ee6134cdd78429f91050802f03d3, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4879496496169902951, guid: e2b0ee6134cdd78429f91050802f03d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6226324142506481658, guid: b228e2f0a77f7da4ca188afc54fa47bf, type: 3}
     - target: {fileID: 7247076519525130107, guid: e2b0ee6134cdd78429f91050802f03d3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -11982,7 +12033,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8904676353261835087, guid: e2b0ee6134cdd78429f91050802f03d3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2094528883}
   m_SourcePrefab: {fileID: 100100000, guid: e2b0ee6134cdd78429f91050802f03d3, type: 3}
 --- !u!114 &3028963184377151996
 MonoBehaviour:
