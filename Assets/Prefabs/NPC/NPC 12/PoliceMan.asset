@@ -10,16 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11dc59b4181d551429fbf3f1ee1553b5, type: 3}
-  m_Name: NPC4 Dialogue
+  m_Name: PoliceMan
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: Old Woman
+  npcName: Police man
   npcPortrait: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   dialogueLines:
-  - hello there 2
-  - <insert line here 2>
+  - Are you Sam? Sam Davis?
+  - Ok, this is not easy for anyone to hear.
+  - Please, i think you should sit down.
+  - At 23:52 2nd of October.
+  - Chris Forughe Davis was found dead.
+  - He was among friends.
+  - 'The blood work '
   garbledDialogueLines:
-  - hwrfo tqtye
-  - <i2t3we etwyw lwyw nwye>
+  - Mdm! lggk! lggk! I mhde ih avl tne wjy ub om tde thdbe anjce.
+  - wvntkgt ahy hjfp ay anl!
+  - ...
+  - UGHH, yju nvdgr cgde.
+  - Cjn yjo hdjp ma bdhk dhsn?
   autoProgressLines: 01y
   autoProgressDelay: 1.5
   typingSpeed: 0.05

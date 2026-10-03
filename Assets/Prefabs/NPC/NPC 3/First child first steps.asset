@@ -10,16 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11dc59b4181d551429fbf3f1ee1553b5, type: 3}
-  m_Name: NPC3 Dialogue
+  m_Name: First child first steps
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: Old Woman
+  npcName: First child
   npcPortrait: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   dialogueLines:
-  - hello there 2
-  - <insert line here 2>
+  - Mom! look! look! I made it all the way up on the table alone!
+  - Without any help at all!
+  - ...
+  - But why? It took so long to get up here, i dont wanna.
+  - UGHH, you never care.
+  - Can you help me back down?
   garbledDialogueLines:
-  - hwrfo tqtye
-  - <i2t3we etwyw lwyw nwye>
+  - Mdm! lggk! lggk! I mhde ih avl tne wjy ub om tde thdbe anjce.
+  - wvntkgt ahy hjfp ay anl!
+  - ...
+  - UGHH, yju nvdgr cgde.
+  - Cjn yjo hdjp ma bdhk dhsn?
   autoProgressLines: 01y
   autoProgressDelay: 1.5
   typingSpeed: 0.05

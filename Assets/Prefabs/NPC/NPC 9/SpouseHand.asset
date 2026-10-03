@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11dc59b4181d551429fbf3f1ee1553b5, type: 3}
+  m_Name: SpouseHand
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Spouse
+  npcPortrait: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  dialogueLines:
+  - Don't keep bringing it up.
+  - Please, its getting old.
+  - ARE YOU MOCKING ME!
+  - I am so happy that you think of me, so thoughtful.
+  - You really try to complete me.
+  - YOU CANT EVEN LOOK ME IN MY EYES!
+  - you do nothing but bring up things i cant do.
+  - I feel more useless everyday.
+  - Do you know how humiliating it is to learn to wipe again.
+  - And every time you ignore me, it gets worse.
+  - More and more useless, like a child.
+  - But what is this?
+  - ...
+  - Is this a.. hand...
+  - A real hand?
+  - dripping with blood, but still cold and heavy?
+  - Is it mine?! WOW, amazing!
+  - How did you get the infection out?
+  - How did you get it back from the doctor.
+  - You really went the extra mile here.
+  - 'I love you, and i will never leave you. '
+  - This would have been so good, a few seconds after the accident.
+  - But the thought is nice.
+  - Thank you.
+  garbledDialogueLines:
+  - fds't jfsei ksden urnskd, kfes
+  - ...
+  - 'fhdsjsdkef '
+  - cneya
+  - fnei nias otj jybnrnw wodsl, mgrkd mrosdf
+  - JEFKTMINE NFRH MEEWN JRHE PIOT
+  - Yjeohf hfsekldf YJnfejdfs
+  - heJDFNRjdjr!?
+  - ...
+  - Jrd jeh e.. henn?
+  - drhgsnn dde henn?
+  - htkan ouy
+  autoProgressLines: 01y
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05

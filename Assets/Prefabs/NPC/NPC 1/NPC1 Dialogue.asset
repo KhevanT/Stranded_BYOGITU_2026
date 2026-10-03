@@ -12,14 +12,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11dc59b4181d551429fbf3f1ee1553b5, type: 3}
   m_Name: NPC1 Dialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: Old Man
+  npcName: mom
   npcPortrait: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   dialogueLines:
-  - hello there
-  - <insert other line here>
+  - 'Well, look who decided to come back at home '
+  - You should really write more often, they have paper on boats, right?
+  - Anyways, take a seat, tell me about you.
+  - How have you been?
+  - Where have you been?
+  - Out in the world.
+  - So far away from the old crows at home.
+  - You are out there.
+  - While you left us here.
+  - YOU LEFT ME!
+  - I had to do so much of the planning by myself.
+  - Do you even know your dads favourite flowers?
+  - He didnt have any, so you wouldnt have helped anyways.
+  - You really are trying your best, huh?
+  - Trying to live up to your name?
+  - But not getting on the debate team, is simple inadequate.
+  - You will never be a real Forughe with that lack of effort.
+  - Well, i gave up that name too, when i met your dad
+  - Who am i to judge.
+  - Could you bring in the eggs, il get started on the kuku piaz
+  - I know its your favourite.
   garbledDialogueLines:
   - hwrfo tqtye
-  - <i2t3we etwyw lwyw nwye>
+  - Yeu sofrfdl deasdf fryygh
+  - YDY IAGT NEE!
+  - Yhe nobds bh a rhel forghyt
   autoProgressLines: 01y
   autoProgressDelay: 1.5
   typingSpeed: 0.05

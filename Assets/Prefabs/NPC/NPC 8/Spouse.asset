@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11dc59b4181d551429fbf3f1ee1553b5, type: 3}
+  m_Name: Spouse
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Spouse
+  npcPortrait: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  dialogueLines:
+  - Wait.. Is this for real?
+  - Are you being serious?
+  - and you are still here?
+  - Who's is it?
+  - No, its not important, it doesn't matter, i still love you.
+  - Congratulations.
+  - What are we then?
+  - I am going to take care of you both.
+  - ...
+  - We can take care of each other.
+  - I think it will be nice to finally have one thats from me.
+  - 'The first child is great, '
+  - But it's going to be good to be part of the processs.
+  - Hahahaha
+  - ...
+  - I dont know if i am ready to be a dad.
+  - But it's not mine, so maybe it will be fine.
+  - Maybe im over thinking it.
+  - We will take care of each other.
+  garbledDialogueLines:
+  - wjft... idh the shenrfmn?
+  - arhe jdid otk senroad?
+  - nfje jajfde lfde?
+  - hwo ij it?
+  - no, jfeshs jfesi ksan, nfriehier uimodf, mef
+  - ...
+  - the fiorijs jgndsjldf.
+  - bbeejd jenqhgzge jjfenr.
+  - hehehehehe.
+  - ...
+  - djei kslfe jcnesk kfene neno.
+  autoProgressLines: 01y
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05

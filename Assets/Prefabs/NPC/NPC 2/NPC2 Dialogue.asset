@@ -12,14 +12,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11dc59b4181d551429fbf3f1ee1553b5, type: 3}
   m_Name: NPC2 Dialogue
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
-  npcName: Old Woman
+  npcName: father
   npcPortrait: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   dialogueLines:
-  - hello there 2
-  - <insert line here 2>
+  - Have you gotten dirt under you nails yet?
+  - I have never said this enough,
+  - But you were the best thing to happen to me and you mother.
+  - I always saw myself in you.
+  - ...
+  - You waste your time on school, and books, and debate.
+  - Stop trying to convice people of something they dont know
+  - People never change
+  - But its better to move on now
+  - Just give your mother a little time, she will be ok.
+  - With time.
+  - Give us some time.
+  - Go away for a while.
+  - I will be here when you return.
+  - I will be here.
+  - Im not here
+  - Goodbye.
+  - I always wanted to say that.
+  - But you know, lifes long and then you get liver cancer.
+  - ...
+  - GO TO YOUR ROOM YOUNG LADY!!
   garbledDialogueLines:
-  - hwrfo tqtye
-  - <i2t3we etwyw lwyw nwye>
+  - 'Hske yho ghsdkn djft unskr ybu ndhfs ygt? '
+  - Pjfrbe nehdr cnlafe
+  - ...
+  - Gffsbue.
+  - GV TU YJDR RSSM YKFEJG LNCY!!
   autoProgressLines: 01y
   autoProgressDelay: 1.5
   typingSpeed: 0.05

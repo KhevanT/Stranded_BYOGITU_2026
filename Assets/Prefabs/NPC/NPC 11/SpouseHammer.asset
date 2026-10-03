@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11dc59b4181d551429fbf3f1ee1553b5, type: 3}
+  m_Name: SpouseHammer
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
+  npcName: Spouse
+  npcPortrait: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  dialogueLines:
+  - You see that hammer over there?
+  - That is my most trusted buisness partner.
+  - Always reliable, always there.
+  - He would never leave me.
+  - He would never not work.
+  - Thats all he knows.
+  - He works, he fixes, he helps
+  - He is the tool for other tools.
+  - It can't just stop, he wouldn't.
+  - He was forced to.
+  - That stupid hammer fell of the handle!
+  - He turned a tiny broken bone,
+  - Severed nerves,
+  - And infected scars,
+  - into a point of no return.
+  - HE LEFT!
+  - What is left? A stupid stick and a useless arm.
+  - He is useless, with nothing to do.
+  - Nothing to help, nothing to fix.
+  - He doesnt deserve to be outside.
+  - He should be in a cave.
+  - Away from the sun and all joy.
+  garbledDialogueLines:
+  - asdhej, jfesijd jfesj kasdlsef
+  - fhanner iodsf j ue besf fkfdsio hennser
+  - fresdf kfesinds naoef as
+  - mdeks kja llel apokfesa.
+  - hs akdaiwjskdja kdeaj
+  - hs kedij jdawksdjael dea
+  - hs pke kmneaoqsa akwe
+  autoProgressLines: 01y
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
