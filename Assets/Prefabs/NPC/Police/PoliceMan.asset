@@ -21,13 +21,24 @@ MonoBehaviour:
   - At 23:52 2nd of October.
   - Chris Forughe Davis was found dead.
   - He was among friends.
-  - 'The blood work '
-  garbledDialogueLines:
-  - Mdm! lggk! lggk! I mhde ih avl tne wjy ub om tde thdbe anjce.
-  - wvntkgt ahy hjfp ay anl!
+  - 'The blood work shows signs of cocain and fentanyl. '
+  - There were no signs of struggle.
+  - He was quiet.
+  - And still.
+  - Outside. Alone.
+  - I'm sorry for your loss.
+  - Things are going to change.
+  - If you need any help, please with until you hear the tone.
   - ...
-  - UGHH, yju nvdgr cgde.
-  - Cjn yjo hdjp ma bdhk dhsn?
+  - See you around ma'am.
+  garbledDialogueLines:
+  - ahr yje Sfu? Sfu Dbhss?
+  - ok, thsk ials jfesk kaln aynone he head.
+  - plesa, j thn kalue jascnei isihjwa.
+  - hfri 3234:84920 773he ofrj ksairs.
+  - Chhejs Fohfena Dbhss fjes dekoam
+  - ...
+  - Saa yhe ajroudn mann
   autoProgressLines: 01y
   autoProgressDelay: 1.5
   typingSpeed: 0.05
