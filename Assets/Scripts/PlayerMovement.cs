@@ -12,9 +12,12 @@ public class PlayerMovement : MonoBehaviour
 
     // Interactions
     bool isInNPCRadius = false;
+    GameObject nearbyNPC;
+    public static event Action<NPC.NPC_ID> OnNPCInteracted;
 
     // Anim
     bool isWalking = false;
+    bool isTalking = false;
 
     // State changes
     public bool motorSunk = false; // TEMP
@@ -80,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
         if(context.performed && isInNPCRadius)
         {
             Debug.Log("Clicked E");
+            OnNPCInteracted?.Invoke(nearbyNPC.GetComponent<NPC>().npcID);
         }
     }
 
@@ -88,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
         if(collision.gameObject.tag == "NPC")
         {
             isInNPCRadius = true;
+            nearbyNPC = collision.gameObject;
         }
     }
 
@@ -96,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "NPC")
         {
             isInNPCRadius = false;
+            nearbyNPC = null;
         }
     }
 

@@ -16,7 +16,7 @@ public class PauseController : MonoBehaviour
         
     }
 
-    public static void SetPaused(bool pause)
+    public static void SetPause(bool pause)
     {
         IsPaused = pause;
     }

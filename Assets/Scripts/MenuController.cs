@@ -28,13 +28,13 @@ public class MenuController : MonoBehaviour
             {
                 menuOn = false;
                 menuCanvas.SetActive(false);
-                PauseController.SetPaused(false);
+                PauseController.SetPause(false);
             }
             else
             {
                 menuOn = true;
                 menuCanvas.SetActive(true);
-                PauseController.SetPaused(true);
+                PauseController.SetPause(true);
             }
             Debug.Log("Menu toggled to: " + menuOn);
         }
