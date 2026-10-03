@@ -4,12 +4,17 @@ using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    // Movement & collision
     public float moveSpeed = 5f;
     private Vector2 moveInput;
     public Rigidbody2D rb2D;
     public BoxCollider2D box2D;
 
+    // Interactions
     bool isInNPCRadius = false;
+
+    // Anim
+    bool isWalking = false;
 
     // State changes
     public bool motorSunk = false; // TEMP
@@ -37,6 +42,12 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(PauseController.IsPaused)
+        {
+            rb2D.linearVelocity = Vector2.zero;
+            isWalking = false; // later update for anim
+            return;
+        }
         rb2D.linearVelocity = moveInput * moveSpeed;
     }
 
