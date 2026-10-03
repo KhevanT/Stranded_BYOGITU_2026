@@ -14,6 +14,7 @@ public class NPC : MonoBehaviour
     }
 
     public NPC_ID npcID;
+    public bool isLanguageSunk; // ADD LOGIC FOR GARBLED TEXT
     public NPCDialogue dialogueData;
     public GameObject dialoguePanel;
     public TMP_Text dialogueText, nameText;
@@ -33,7 +34,7 @@ public class NPC : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        isLanguageSunk = false;
     }
 
     // Update is called once per frame
@@ -76,21 +77,43 @@ public class NPC : MonoBehaviour
 
     public void NextLine()
     { 
-        if(isTyping)
+        if(isLanguageSunk)
         {
-            // skip typing animation and show the full line
-            StopAllCoroutines();
-            dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
-            isTyping = false;
-        }
-        else if (++dialogueIndex < dialogueData.dialogueLines.Length)
-        {
-            StartCoroutine(TypeLine());
+            if (isTyping)
+            {
+                // skip typing animation and show the full line
+                StopAllCoroutines();
+                dialogueText.SetText(dialogueData.garbledDialogueLines[dialogueIndex]);
+                isTyping = false;
+            }
+            else if (++dialogueIndex < dialogueData.dialogueLines.Length)
+            {
+                StartCoroutine(TypeLine());
+            }
+            else
+            {
+                EndDialogue();
+            }
         }
         else
         {
-            EndDialogue();
+            if (isTyping)
+            {
+                // skip typing animation and show the full line
+                StopAllCoroutines();
+                dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
+                isTyping = false;
+            }
+            else if (++dialogueIndex < dialogueData.dialogueLines.Length)
+            {
+                StartCoroutine(TypeLine());
+            }
+            else
+            {
+                EndDialogue();
+            }
         }
+        
     }
 
     IEnumerator TypeLine()
@@ -98,21 +121,43 @@ public class NPC : MonoBehaviour
         isTyping = true;
         dialogueText.SetText("");
 
-        foreach(char letter in dialogueData.dialogueLines[dialogueIndex])
+        if (isLanguageSunk)
         {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(dialogueData.typingSpeed);
+            foreach (char letter in dialogueData.garbledDialogueLines[dialogueIndex])
+            {
+                dialogueText.text += letter;
+                yield return new WaitForSeconds(dialogueData.typingSpeed);
+            }
+
+            isTyping = false;
+            bool autoProgress = true; // temp because of buggy SO ui
+
+            // bool autoProgress = dialogueData.autoProgressLines[dialogueIndex];
+            if (dialogueData.autoProgressLines.Length > dialogueIndex && autoProgress)
+            {
+                yield return new WaitForSeconds(dialogueData.autoProgressDelay);
+                NextLine();
+            }
         }
-
-        isTyping = false;
-        bool autoProgress = true; // temp because of buggy SO ui
-
-        // bool autoProgress = dialogueData.autoProgressLines[dialogueIndex];
-        if (dialogueData.autoProgressLines.Length > dialogueIndex && autoProgress)
+        else
         {
-            yield return new WaitForSeconds(dialogueData.autoProgressDelay);
-            NextLine();
+            foreach (char letter in dialogueData.dialogueLines[dialogueIndex])
+            {
+                dialogueText.text += letter;
+                yield return new WaitForSeconds(dialogueData.typingSpeed);
+            }
+
+            isTyping = false;
+            bool autoProgress = true; // temp because of buggy SO ui
+
+            // bool autoProgress = dialogueData.autoProgressLines[dialogueIndex];
+            if (dialogueData.autoProgressLines.Length > dialogueIndex && autoProgress)
+            {
+                yield return new WaitForSeconds(dialogueData.autoProgressDelay);
+                NextLine();
+            }
         }
+        
     }
 
     public void EndDialogue()
@@ -123,6 +168,11 @@ public class NPC : MonoBehaviour
         dialoguePanel.SetActive(false);
         PauseController.SetPause(false);
         OnNPCInteractionEnd?.Invoke(npcID);
+    }
+
+    void OnLanguageSunk()
+    {
+        isLanguageSunk = true;
     }
 
     void OnDestroy()
