@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
-        motorSunk = true;
+        motorSunk = false;
         GameStateManager.OnMotorSink += OnMotorSunk;
     }
 
@@ -86,13 +86,6 @@ public class PlayerMovement : MonoBehaviour
         {
             isInNPCRadius = false;
         }
-        
-        /*
-        if (collision.gameObject.tag == "Door")
-        {
-            OnEnterDoor?.Invoke();
-        }
-        */
     }
 
     void OnMotorSunk()

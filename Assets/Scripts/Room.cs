@@ -13,7 +13,7 @@ public class Room : MonoBehaviour
     }
 
     public Room_ID roomID;
-    public Vector3 cameraPos;
+    // public Vector3 cameraPos;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
