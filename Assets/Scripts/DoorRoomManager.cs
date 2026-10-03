@@ -7,7 +7,7 @@ using static UnityEngine.Rendering.DebugUI;
 public class DoorRoomManager : MonoBehaviour
 {
     // Room storage
-    public Room.Room_ID currRoom = Room.Room_ID.StartRoom;
+    public Room.Room_ID currRoom = Room.Room_ID.Room_4_3;
     [SerializeField]
     private Dictionary<Room.Room_ID, Room> roomIndexInstance = new Dictionary<Room.Room_ID, Room>(); // only unity 6.6
     public static Dictionary<Room.Room_ID, Room> RoomIndex { get; private set; }
@@ -36,13 +36,35 @@ public class DoorRoomManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currRoom = Room.Room_ID.StartRoom;
+        currRoom = Room.Room_ID.Room_4_3;
+        InitializeDoors();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    void InitializeDoors()
+    {
+        // Disable all doors
+        foreach (var roomDoors in RoomDoorIndex.Values)
+        {
+            foreach (Door door in roomDoors)
+            {
+                door.gameObject.SetActive(false);
+            }
+        }
+
+        // Enable doors for the current room
+        if (RoomDoorIndex.TryGetValue(currRoom, out List<Door> currentDoors))
+        {
+            foreach (Door door in currentDoors)
+            {
+                door.gameObject.SetActive(true);
+            }
+        }
     }
 
     // Updates room by disabling all current doors and re enabling new ones (after a short delay)

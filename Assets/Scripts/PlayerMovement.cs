@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(context.performed && isInNPCRadius)
         {
-            Debug.Log("Clicked E");
+            // Debug.Log("Clicked E");
             OnNPCInteracted?.Invoke(nearbyNPC.GetComponent<NPC>().npcID);
         }
     }
@@ -93,6 +93,11 @@ public class PlayerMovement : MonoBehaviour
         {
             isInNPCRadius = true;
             nearbyNPC = collision.gameObject;
+        }
+        else
+        {
+            isInNPCRadius = false;
+            nearbyNPC = null;
         }
     }
 

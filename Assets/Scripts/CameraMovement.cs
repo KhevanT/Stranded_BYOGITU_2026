@@ -9,7 +9,7 @@ public class CameraMovement : MonoBehaviour
     private Dictionary<Room.Room_ID, CinemachineCamera> cameraIndexInstance = new Dictionary<Room.Room_ID, CinemachineCamera>(); // only unity 6.6
     public static Dictionary<Room.Room_ID, CinemachineCamera> CameraRoomIndex { get; private set; }
 
-    public Room.Room_ID currRoom = Room.Room_ID.StartRoom;
+    public Room.Room_ID currRoom = Room.Room_ID.Room_4_3;
 
     void Awake()
     {
@@ -34,7 +34,7 @@ public class CameraMovement : MonoBehaviour
     // TEMP: Maybe lerp or add transition
     void OnPlayerEnterDoor(Room.Room_ID from, Room.Room_ID to)
     {
-        Debug.Log("Swapping cameras");
+        // Debug.Log("Swapping cameras");
         CameraRoomIndex[from].gameObject.SetActive(false);
         CameraRoomIndex[to].gameObject.SetActive(true);
     }

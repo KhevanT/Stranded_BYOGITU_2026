@@ -31,7 +31,8 @@ public class Door : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             OnPlayerEnterDoor?.Invoke(from, to);
-            Debug.Log("Player entered door");
+            Debug.Log("Player goes from: " + from.ToString() + " to " + to.ToString());
+            //Debug.Log("Player entered door");
         }
     }
 
@@ -39,7 +40,7 @@ public class Door : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Player exited door");
+            //Debug.Log("Player exited door");
         }
     }
 }
