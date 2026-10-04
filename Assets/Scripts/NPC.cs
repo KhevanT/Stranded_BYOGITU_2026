@@ -13,6 +13,7 @@ public class NPC : MonoBehaviour
         NPC2
     }
 
+    private static NPC activeNPC;
     public NPC_ID npcID;
     public bool isLanguageSunk; // ADD LOGIC FOR GARBLED TEXT
     public NPCDialogue dialogueData;
@@ -28,7 +29,7 @@ public class NPC : MonoBehaviour
 
     void Awake()
     {
-        PlayerMovement.OnNPCInteracted += Interact;
+        
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -43,11 +44,8 @@ public class NPC : MonoBehaviour
         
     }
 
-    public void Interact(NPC.NPC_ID id)
+    public void Interact()
     {
-        if (id != npcID)
-            return;
-
         if (dialogueData == null || (PauseController.IsPaused && !isDialogueActive))
             return;
 
@@ -63,6 +61,13 @@ public class NPC : MonoBehaviour
 
     void StartDialogue()
     {
+        if (activeNPC != null && activeNPC != this)
+        {
+            activeNPC.EndDialogue();
+        }
+
+        activeNPC = this;
+
         isDialogueActive = true;
         dialogueIndex = 0;
 
@@ -76,7 +81,36 @@ public class NPC : MonoBehaviour
     }
 
     public void NextLine()
-    { 
+    {
+        int dialogueLength = isLanguageSunk
+        ? dialogueData.garbledDialogueLines.Length
+        : dialogueData.dialogueLines.Length;
+
+        if (isTyping)
+        {
+            StopAllCoroutines();
+
+            if (isLanguageSunk)
+            {
+                dialogueText.SetText(dialogueData.garbledDialogueLines[dialogueIndex]);
+            }
+            else
+            {
+                dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
+            }
+
+            isTyping = false;
+        }
+        else if (++dialogueIndex < dialogueLength)
+        {
+            StartCoroutine(TypeLine());
+        }
+        else
+        {
+            EndDialogue();
+        }
+
+        /*
         if(isLanguageSunk)
         {
             if (isTyping)
@@ -97,27 +131,38 @@ public class NPC : MonoBehaviour
         }
         else
         {
+            //Debug.Log($"[{npcID}] NextLine BEFORE: dialogueIndex = {dialogueIndex}, total lines = {dialogueData.dialogueLines.Length}");
+
             if (isTyping)
             {
-                // skip typing animation and show the full line
                 StopAllCoroutines();
+
                 dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
                 isTyping = false;
+
+                //Debug.Log($"[{npcID}] Finished current line manually");
             }
             else if (++dialogueIndex < dialogueData.dialogueLines.Length)
             {
+                //Debug.Log($"[{npcID}] Starting line {dialogueIndex}");
+
                 StartCoroutine(TypeLine());
             }
             else
             {
+                //Debug.Log($"[{npcID}] Reached END. dialogueIndex = {dialogueIndex}, total = {dialogueData.dialogueLines.Length}");
+
                 EndDialogue();
             }
         }
-        
+        */
+
     }
 
     IEnumerator TypeLine()
     {
+        //Debug.Log("TypeLine from " + npcID);
+
         isTyping = true;
         dialogueText.SetText("");
 
@@ -125,18 +170,9 @@ public class NPC : MonoBehaviour
         {
             foreach (char letter in dialogueData.garbledDialogueLines[dialogueIndex])
             {
+                //Debug.Log("Writing dialogue from " + npcID);
                 dialogueText.text += letter;
                 yield return new WaitForSeconds(dialogueData.typingSpeed);
-            }
-
-            isTyping = false;
-            bool autoProgress = true; // temp because of buggy SO ui
-
-            // bool autoProgress = dialogueData.autoProgressLines[dialogueIndex];
-            if (dialogueData.autoProgressLines.Length > dialogueIndex && autoProgress)
-            {
-                yield return new WaitForSeconds(dialogueData.autoProgressDelay);
-                NextLine();
             }
         }
         else
@@ -146,18 +182,23 @@ public class NPC : MonoBehaviour
                 dialogueText.text += letter;
                 yield return new WaitForSeconds(dialogueData.typingSpeed);
             }
-
-            isTyping = false;
-            bool autoProgress = true; // temp because of buggy SO ui
-
-            // bool autoProgress = dialogueData.autoProgressLines[dialogueIndex];
-            if (dialogueData.autoProgressLines.Length > dialogueIndex && autoProgress)
-            {
-                yield return new WaitForSeconds(dialogueData.autoProgressDelay);
-                NextLine();
-            }
         }
-        
+
+        isTyping = false;
+
+        /*
+        // TEMP: always auto-progress, ignore autoProgressLines
+        yield return new WaitForSeconds(dialogueData.autoProgressDelay);
+        NextLine();
+        */
+    }
+
+    public void NextLineButton()
+    {
+        if (activeNPC != null)
+        {
+            activeNPC.NextLine();
+        }
     }
 
     public void EndDialogue()
@@ -168,6 +209,11 @@ public class NPC : MonoBehaviour
         dialoguePanel.SetActive(false);
         PauseController.SetPause(false);
         OnNPCInteractionEnd?.Invoke(npcID);
+
+        if (activeNPC == this)
+        {
+            activeNPC = null;
+        }
     }
 
     void OnLanguageSunk()
@@ -177,6 +223,6 @@ public class NPC : MonoBehaviour
 
     void OnDestroy()
     {
-        PlayerMovement.OnNPCInteracted -= Interact;
+        
     }
 }

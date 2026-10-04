@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     // Interactions
     bool isInNPCRadius = false;
     GameObject nearbyNPC;
-    public static event Action<NPC.NPC_ID> OnNPCInteracted;
+    // public static event Action<NPC.NPC_ID> OnNPCInteracted;
 
     // Anim
     Animator animator;
@@ -25,13 +25,15 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
-        motorSunk = false;
-        GameStateManager.OnMotorSink += OnMotorSunk;
+        
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        motorSunk = false;
+        GameStateManager.OnMotorSink += OnMotorSunk;
+
         rb2D = GetComponent<Rigidbody2D>();
         box2D = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
@@ -90,27 +92,22 @@ public class PlayerMovement : MonoBehaviour
         if(context.performed && isInNPCRadius)
         {
             // Debug.Log("Clicked E");
-            OnNPCInteracted?.Invoke(nearbyNPC.GetComponent<NPC>().npcID);
+            nearbyNPC.GetComponent<NPC>().Interact();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "NPC")
+        if (collision.CompareTag("NPC"))
         {
             isInNPCRadius = true;
             nearbyNPC = collision.gameObject;
-        }
-        else
-        {
-            isInNPCRadius = false;
-            nearbyNPC = null;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "NPC")
+        if (collision.CompareTag("NPC") && collision.gameObject == nearbyNPC)
         {
             isInNPCRadius = false;
             nearbyNPC = null;

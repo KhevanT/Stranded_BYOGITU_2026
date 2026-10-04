@@ -610,8 +610,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   npcID: 0
-  isLanguageSunk: 0
-  dialogueData: {fileID: 11400000, guid: 3fd07e5e5adc8e6479735b27c2150190, type: 2}
+  isLanguageSunk: 1
+  dialogueData: {fileID: 11400000, guid: 3e7927083a5b3094ca02f6413831a888, type: 2}
   dialoguePanel: {fileID: 515983483}
   dialogueText: {fileID: 1000106638}
   nameText: {fileID: 389528250}
@@ -636,7 +636,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &124455043
 Transform:
   m_ObjectHideFlags: 0
@@ -2668,6 +2668,8 @@ MonoBehaviour:
   bgm: {fileID: 8300000, guid: 79befe1c246d91a479e5e39587e37292, type: 3}
   walk1: {fileID: 8300000, guid: f269f30014dd97d4aa00043517751823, type: 3}
   walk2: {fileID: 8300000, guid: b377651b9c7b3f241acceb407db21486, type: 3}
+  bgmFadeInDuration: 5
+  musicVolume: 1
 --- !u!1 &502044796
 GameObject:
   m_ObjectHideFlags: 0
@@ -7166,7 +7168,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 107720476}
         m_TargetAssemblyTypeName: NPC, Assembly-CSharp
-        m_MethodName: NextLine
+        m_MethodName: NextLineButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11091,8 +11093,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   npcID: 1
-  isLanguageSunk: 0
-  dialogueData: {fileID: 11400000, guid: 3e7927083a5b3094ca02f6413831a888, type: 2}
+  isLanguageSunk: 1
+  dialogueData: {fileID: 11400000, guid: 1e70c3aa0ff5ceb4eadf9409d339b6c4, type: 2}
   dialoguePanel: {fileID: 515983483}
   dialogueText: {fileID: 1000106638}
   nameText: {fileID: 389528250}
