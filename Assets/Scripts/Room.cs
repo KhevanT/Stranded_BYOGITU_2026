@@ -3,6 +3,14 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
+    public enum Room_Type
+    {
+        Visual,
+        Language,
+        Motor,
+        Safe
+    }
+
     public enum Room_ID // starts from top left
     {
         Room_1_1,
@@ -24,9 +32,9 @@ public class Room : MonoBehaviour
     }
 
     public Room_ID roomID;
+    public Room_Type roomType;
+    public bool isRoomSunk;
     // public Vector3 cameraPos;
-
-    // changed
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

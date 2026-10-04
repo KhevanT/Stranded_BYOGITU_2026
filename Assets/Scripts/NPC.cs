@@ -4,7 +4,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// Need to add IInteractable functionality!!!
 public class NPC : MonoBehaviour
 {
     public enum NPC_ID

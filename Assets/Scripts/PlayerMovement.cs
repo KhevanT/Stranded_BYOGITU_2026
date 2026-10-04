@@ -19,13 +19,12 @@ public class PlayerMovement : MonoBehaviour
     Animator animator;
 
     // State changes
-    public bool motorSunk = false; // TEMP
+    public bool motorSunk = false; 
 
     // Events
 
     void Awake()
     {
-        
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

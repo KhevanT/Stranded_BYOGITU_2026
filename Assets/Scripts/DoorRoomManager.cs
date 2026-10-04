@@ -7,7 +7,7 @@ using static UnityEngine.Rendering.DebugUI;
 public class DoorRoomManager : MonoBehaviour
 {
     // Room storage
-    public Room.Room_ID currRoom = Room.Room_ID.Room_4_3;
+    public static Room.Room_ID currRoom = Room.Room_ID.Room_4_3;
     [SerializeField]
     private Dictionary<Room.Room_ID, Room> roomIndexInstance = new Dictionary<Room.Room_ID, Room>(); // only unity 6.6
     public static Dictionary<Room.Room_ID, Room> RoomIndex { get; private set; }
@@ -31,6 +31,7 @@ public class DoorRoomManager : MonoBehaviour
         RoomDoorIndex = roomDoorInstance;
         // DoorColliderIndex = doorColliderInstance;
         Door.OnPlayerEnterDoor += UpdateRoom;
+        GameStateManager.OnVisualSink += SinkVisualRooms;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -102,4 +103,12 @@ public class DoorRoomManager : MonoBehaviour
         Door.OnPlayerEnterDoor -= UpdateRoom;
     }
 
+    void SinkVisualRooms()
+    {
+        // Check if player is in a room being sunk, teleport them nearby
+
+        // Access all the rooms and "sink" the ones with visual
+
+        // Turn off all doors that lead to them
+    }
 }
