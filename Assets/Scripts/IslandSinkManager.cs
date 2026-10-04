@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -42,6 +43,7 @@ public class IslandSinkManager : MonoBehaviour
     // UI
     public TMP_Text timeLeftText;
     public Image visualImage, motorImage, languageImage; // fixed sequence visual > motor > language
+    public GameObject gameOverPanel;
 
     void Awake()
     {
@@ -54,6 +56,7 @@ public class IslandSinkManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        gameOverPanel.SetActive(false);
         islandState = IslandState.FullIsland;
 
         worldTimeRemaining = worldTimeTotal;
@@ -161,6 +164,17 @@ public class IslandSinkManager : MonoBehaviour
         Debug.Log("Game over");
         islandState = IslandState.SunkIsland;
         OnWorldSink?.Invoke();
+        StartCoroutine(ShowGameOverScreen());
+    }
+
+    IEnumerator ShowGameOverScreen()
+    {
+        PauseController.SetPause(true);
+        gameOverPanel.SetActive(true);
+
+        yield return new WaitForSeconds(3f);
+
+        GameSceneManager.OnGameOver();
     }
 
     void SinkVisual()

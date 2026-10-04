@@ -15,8 +15,13 @@ public class GameSceneManager : MonoBehaviour
         
     }
 
-    public void OnStartClick()
+    public static void OnStartClick()
     {
         SceneManager.LoadScene("Gameplay");
+    }
+
+    public static void OnGameOver()
+    {
+        SceneManager.LoadScene("TitleScreen");
     }
 }
