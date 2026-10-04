@@ -36,7 +36,7 @@ public class MenuController : MonoBehaviour
                 menuCanvas.SetActive(true);
                 PauseController.SetPause(true);
             }
-            Debug.Log("Menu toggled to: " + menuOn);
+            // Debug.Log("Menu toggled to: " + menuOn);
         }
     }
 }
