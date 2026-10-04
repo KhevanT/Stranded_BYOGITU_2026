@@ -316,15 +316,15 @@ RectTransform:
   m_Children:
   - {fileID: 1395480298}
   - {fileID: 475661698}
-  - {fileID: 1444892864}
   - {fileID: 1884735434}
   - {fileID: 1940708651}
+  - {fileID: 1444892864}
   m_Father: {fileID: 8631184878435187388}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 18}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 38.083313, y: -143.07086}
+  m_SizeDelta: {x: 1996.1666, y: 322.14172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &444002534
 MonoBehaviour:
@@ -431,7 +431,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -702.9223, y: 435}
+  m_AnchoredPosition: {x: -702.9223, y: -6.000061}
   m_SizeDelta: {x: 312.1554, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &475661699
@@ -1004,7 +1004,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 437}
+  m_AnchoredPosition: {x: 0, y: -4}
   m_SizeDelta: {x: 1780, y: 140.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1395480299
@@ -1079,7 +1079,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 506, y: 445}
+  m_AnchoredPosition: {x: 792, y: 3.999939}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1444892865
@@ -1330,7 +1330,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 644, y: 445}
+  m_AnchoredPosition: {x: 499, y: 3.999939}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1884735435
@@ -1416,7 +1416,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 785, y: 445}
+  m_AnchoredPosition: {x: 651, y: 3.999939}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1940708652
@@ -2013,6 +2013,22 @@ PrefabInstance:
       propertyPath: languageImage
       value: 
       objectReference: {fileID: 1444892865}
+    - target: {fileID: 3537048594123877545, guid: 137c2bbf9f4506e4f9f6962ae6b6e821, type: 3}
+      propertyPath: motorTimeTotal
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537048594123877545, guid: 137c2bbf9f4506e4f9f6962ae6b6e821, type: 3}
+      propertyPath: worldTimeTotal
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537048594123877545, guid: 137c2bbf9f4506e4f9f6962ae6b6e821, type: 3}
+      propertyPath: visualTimeTotal
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3537048594123877545, guid: 137c2bbf9f4506e4f9f6962ae6b6e821, type: 3}
+      propertyPath: languageTimeTotal
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 3874311297344886202, guid: 137c2bbf9f4506e4f9f6962ae6b6e821, type: 3}
       propertyPath: roomIndexInstance.Array.data[0].value
       value: 

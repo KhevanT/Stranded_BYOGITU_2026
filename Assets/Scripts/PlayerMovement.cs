@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         motorSunk = false;
-        GameStateManager.OnMotorSink += OnMotorSunk;
+        IslandSinkManager.OnMotorSink += OnMotorSunk;
 
         rb2D = GetComponent<Rigidbody2D>();
         box2D = GetComponent<BoxCollider2D>();
@@ -120,7 +120,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnDestroy()
     {
-        GameStateManager.OnMotorSink -= OnMotorSunk;
+        IslandSinkManager.OnMotorSink -= OnMotorSunk;
     }
 
 }

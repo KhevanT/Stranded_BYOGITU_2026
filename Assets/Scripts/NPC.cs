@@ -28,7 +28,7 @@ public class NPC : MonoBehaviour
 
     void Awake()
     {
-        
+        IslandSinkManager.OnLanguageSink += OnLanguageSunk;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -109,53 +109,6 @@ public class NPC : MonoBehaviour
             EndDialogue();
         }
 
-        /*
-        if(isLanguageSunk)
-        {
-            if (isTyping)
-            {
-                // skip typing animation and show the full line
-                StopAllCoroutines();
-                dialogueText.SetText(dialogueData.garbledDialogueLines[dialogueIndex]);
-                isTyping = false;
-            }
-            else if (++dialogueIndex < dialogueData.dialogueLines.Length)
-            {
-                StartCoroutine(TypeLine());
-            }
-            else
-            {
-                EndDialogue();
-            }
-        }
-        else
-        {
-            //Debug.Log($"[{npcID}] NextLine BEFORE: dialogueIndex = {dialogueIndex}, total lines = {dialogueData.dialogueLines.Length}");
-
-            if (isTyping)
-            {
-                StopAllCoroutines();
-
-                dialogueText.SetText(dialogueData.dialogueLines[dialogueIndex]);
-                isTyping = false;
-
-                //Debug.Log($"[{npcID}] Finished current line manually");
-            }
-            else if (++dialogueIndex < dialogueData.dialogueLines.Length)
-            {
-                //Debug.Log($"[{npcID}] Starting line {dialogueIndex}");
-
-                StartCoroutine(TypeLine());
-            }
-            else
-            {
-                //Debug.Log($"[{npcID}] Reached END. dialogueIndex = {dialogueIndex}, total = {dialogueData.dialogueLines.Length}");
-
-                EndDialogue();
-            }
-        }
-        */
-
     }
 
     IEnumerator TypeLine()
@@ -222,6 +175,6 @@ public class NPC : MonoBehaviour
 
     void OnDestroy()
     {
-        
+        IslandSinkManager.OnLanguageSink -= OnLanguageSunk;
     }
 }

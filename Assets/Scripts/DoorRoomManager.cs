@@ -31,7 +31,9 @@ public class DoorRoomManager : MonoBehaviour
         RoomDoorIndex = roomDoorInstance;
         // DoorColliderIndex = doorColliderInstance;
         Door.OnPlayerEnterDoor += UpdateRoom;
-        GameStateManager.OnVisualSink += SinkVisualRooms;
+        IslandSinkManager.OnVisualSink += SinkVisualRooms;
+        IslandSinkManager.OnMotorSink += SinkMotorRooms;
+        IslandSinkManager.OnLanguageSink += SinkLanguageRooms;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -100,10 +102,32 @@ public class DoorRoomManager : MonoBehaviour
 
     void OnDestroy()
     {
-        Door.OnPlayerEnterDoor -= UpdateRoom;
+
+        Door.OnPlayerEnterDoor += UpdateRoom;
+        IslandSinkManager.OnVisualSink -= SinkVisualRooms;
+        IslandSinkManager.OnMotorSink -= SinkMotorRooms;
+        IslandSinkManager.OnLanguageSink -= SinkLanguageRooms;
     }
 
     void SinkVisualRooms()
+    {
+        // Check if player is in a room being sunk, teleport them nearby
+
+        // Access all the rooms and "sink" the ones with visual
+
+        // Turn off all doors that lead to them
+    }
+
+    void SinkMotorRooms()
+    {
+        // Check if player is in a room being sunk, teleport them nearby
+
+        // Access all the rooms and "sink" the ones with visual
+
+        // Turn off all doors that lead to them
+    }
+
+    void SinkLanguageRooms()
     {
         // Check if player is in a room being sunk, teleport them nearby
 
