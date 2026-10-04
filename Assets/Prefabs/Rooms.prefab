@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Room
   roomID: 11
   roomType: 0
+  isRoomSunk: 0
 --- !u!1 &762814579839960574
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Room
   roomID: 8
   roomType: 1
+  isRoomSunk: 0
 --- !u!1 &895485551306339342
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,7 +322,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
   roomID: 15
-  roomType: 3
+  roomType: 0
+  isRoomSunk: 0
 --- !u!1 &2006236785711773152
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,6 +431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Room
   roomID: 9
   roomType: 1
+  isRoomSunk: 0
 --- !u!1 &2303431823758808819
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +538,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
   roomID: 5
-  roomType: 2
+  roomType: 1
+  isRoomSunk: 0
 --- !u!1 &2799983508844423956
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,6 +647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Room
   roomID: 2
   roomType: 2
+  isRoomSunk: 0
 --- !u!1 &4538056709766753684
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,7 +754,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
   roomID: 14
-  roomType: 3
+  roomType: 0
+  isRoomSunk: 0
 --- !u!1 &4574963455044002512
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Room
   roomID: 4
   roomType: 1
+  isRoomSunk: 0
 --- !u!1 &4869574645992021552
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,7 +970,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
   roomID: 7
-  roomType: 0
+  roomType: 2
+  isRoomSunk: 0
 --- !u!1 &5216921093881247460
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,6 +1079,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Room
   roomID: 6
   roomType: 2
+  isRoomSunk: 0
 --- !u!1 &6542994197321915341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,6 +1187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Room
   roomID: 10
   roomType: 3
+  isRoomSunk: 0
 --- !u!1 &7389262533596551513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,6 +1295,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Room
   roomID: 3
   roomType: 2
+  isRoomSunk: 0
 --- !u!1 &7748634707441863272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1390,7 +1402,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
   roomID: 13
-  roomType: 3
+  roomType: 1
+  isRoomSunk: 0
 --- !u!1 &8035485891047550532
 GameObject:
   m_ObjectHideFlags: 0
@@ -1497,7 +1510,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Room
   roomID: 1
-  roomType: 2
+  roomType: 1
+  isRoomSunk: 0
 --- !u!1 &8714485954490427854
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,6 +1666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Room
   roomID: 12
   roomType: 3
+  isRoomSunk: 0
 --- !u!1 &9037332991682740207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,3 +1774,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Room
   roomID: 0
   roomType: 1
+  isRoomSunk: 0

@@ -8,8 +8,18 @@ public class NPC : MonoBehaviour
 {
     public enum NPC_ID
     {
-        NPC1,
-        NPC2
+        FatherLeft, // (1,1)
+        FirstChildAdult, // (2,2)
+        FirstChildChoke, // (2,3)
+        FirstChildFirstStep, // (4,3)
+        MomLeft, // (3, 4)
+        Police, // (2,4)
+        SecondChildLast, // (3,1)
+        SecondChildOnion, // (2,3)
+        SpouseBaby, // (1,2)
+        SpouseCheat, // (3,2)
+        SpouseHammer, // (2,1)
+        SpouseHand, // (1,3)
     }
 
     private static NPC activeNPC;

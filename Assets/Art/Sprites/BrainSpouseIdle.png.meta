@@ -55,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -95,7 +95,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -149,12 +149,12 @@ TextureImporter:
       name: BrainSpouseIdle_0
       rect:
         serializedVersion: 2
-        x: 74
-        y: 122
-        width: 39
-        height: 36
+        x: 0
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -171,12 +171,12 @@ TextureImporter:
       name: BrainSpouseIdle_1
       rect:
         serializedVersion: 2
-        x: 251
-        y: 8
-        width: 94
-        height: 114
+        x: 200
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -193,12 +193,12 @@ TextureImporter:
       name: BrainSpouseIdle_2
       rect:
         serializedVersion: 2
-        x: 273
-        y: 120
-        width: 38
-        height: 37
+        x: 400
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -215,12 +215,12 @@ TextureImporter:
       name: BrainSpouseIdle_3
       rect:
         serializedVersion: 2
-        x: 474
-        y: 122
-        width: 39
-        height: 36
+        x: 600
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -233,77 +233,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: BrainSpouseIdle_4
-      rect:
-        serializedVersion: 2
-        x: 650
-        y: 8
-        width: 74
-        height: 149
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fa0c4d99d1effb110800000000000000
-      internalID: 1279020222284873903
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrainSpouseIdle_5
-      rect:
-        serializedVersion: 2
-        x: 53
-        y: 10
-        width: 68
-        height: 107
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c0e27f47635fdfe30800000000000000
-      internalID: 4539053613698723340
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrainSpouseIdle_6
-      rect:
-        serializedVersion: 2
-        x: 453
-        y: 10
-        width: 72
-        height: 111
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d05842dc07dfd5770800000000000000
-      internalID: 8601309524267402509
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d96175e4e3419334fb9ed860406f8250
     internalID: 0
     vertices: []
     indices: 
@@ -311,15 +245,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":200.0,"y":200.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       BrainSpouseIdle_0: -2514931914934509845
       BrainSpouseIdle_1: -5792141752553450772
       BrainSpouseIdle_2: 8588739949648916257
       BrainSpouseIdle_3: 3424082820128528804
-      BrainSpouseIdle_4: 1279020222284873903
-      BrainSpouseIdle_5: 4539053613698723340
-      BrainSpouseIdle_6: 8601309524267402509
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

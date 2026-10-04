@@ -31,6 +31,13 @@ public class Room : MonoBehaviour
         Room_4_4,
     }
 
+    /*
+     * Frontal cortex is (1,1)(2,1)(1,2)(2,2)
+        Temporal Cortex is (3,1)(3,2)(4,2)
+        Parietal Cortex is (1,3)(1,4)(2,3)(2,4)
+        Occipital Cortex is (4,3)(3,4)(4,4)
+    */
+
     public Room_ID roomID;
     public Room_Type roomType;
     public bool isRoomSunk;

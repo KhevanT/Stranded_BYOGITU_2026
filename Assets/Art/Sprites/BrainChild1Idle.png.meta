@@ -58,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -98,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -152,12 +152,12 @@ TextureImporter:
       name: BrainChild1Idle_0
       rect:
         serializedVersion: 2
-        x: 77
-        y: 110
-        width: 30
-        height: 30
+        x: 0
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -174,12 +174,12 @@ TextureImporter:
       name: BrainChild1Idle_1
       rect:
         serializedVersion: 2
-        x: 277
-        y: 110
-        width: 30
-        height: 31
+        x: 200
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -196,12 +196,12 @@ TextureImporter:
       name: BrainChild1Idle_2
       rect:
         serializedVersion: 2
-        x: 478
-        y: 113
-        width: 29
-        height: 26
+        x: 400
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: BrainChild1Idle_3
       rect:
         serializedVersion: 2
-        x: 677
-        y: 110
-        width: 30
-        height: 31
+        x: 600
+        y: 0
+        width: 200
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -236,99 +236,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: BrainChild1Idle_4
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 17
-        width: 63
-        height: 94
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a249e5ef06018c3f0800000000000000
-      internalID: -880435718380415958
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrainChild1Idle_5
-      rect:
-        serializedVersion: 2
-        x: 267
-        y: 16
-        width: 60
-        height: 94
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1e2544271c84da790800000000000000
-      internalID: -7517272207328521503
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrainChild1Idle_6
-      rect:
-        serializedVersion: 2
-        x: 471
-        y: 17
-        width: 51
-        height: 94
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d4db35c5fbcddb540800000000000000
-      internalID: 5025415473661197645
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BrainChild1Idle_7
-      rect:
-        serializedVersion: 2
-        x: 668
-        y: 16
-        width: 56
-        height: 94
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ed4676a5309296e80800000000000000
-      internalID: -8184965753390799650
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 800dc639933c48b4787e9c09a1c36e61
     internalID: 0
     vertices: []
     indices: 
@@ -336,16 +248,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":200.0,"y":200.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       BrainChild1Idle_0: 4602932742864320282
       BrainChild1Idle_1: 1408217626020199163
       BrainChild1Idle_2: -700922176561537559
       BrainChild1Idle_3: -9164344002321802999
-      BrainChild1Idle_4: -880435718380415958
-      BrainChild1Idle_5: -7517272207328521503
-      BrainChild1Idle_6: 5025415473661197645
-      BrainChild1Idle_7: -8184965753390799650
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

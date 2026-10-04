@@ -173,7 +173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7c0049f4e38a9c4397e6797c5646999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorRoomManager
-  currRoom: 14
   roomIndexInstance:
   - key: 14
     value: {fileID: 0}
@@ -439,6 +438,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 781f9d4a3c6a50549b17358ed98892a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  islandState: 0
+  isVisualUp: 1
+  isMotorUp: 1
+  isLanguageUp: 1
+  isWorldUp: 1
+  worldTimeTotal: 40
+  worldTimeRemaining: 0
+  visualTimeTotal: 10
+  visualTimeRemaining: 0
+  motorTimeTotal: 20
+  motorTimeRemaining: 0
+  languageTimeTotal: 30
+  languageTimeRemaining: 0
+  timeLeftText: {fileID: 0}
+  visualImage: {fileID: 0}
+  motorImage: {fileID: 0}
+  languageImage: {fileID: 0}
 --- !u!1 &3856054283215509172
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,7 +841,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3042f4587d2fe0e4d9bd4345b698f1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameStateManager
-  islandState: 0
-  isVisualUp: 1
-  isMotorUp: 1
-  isLanguageUp: 1
